@@ -1,0 +1,15 @@
+.site {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+
+.footer-content {
+    grid-column: 1/3;
+    grid-row: 10;
+}

@@ -1,0 +1,289 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+	margin: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+    display: inline-block;
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    color: #ddca7e;
+    background: #282c34;
+	padding: .5em .8em;
+    border-radius: .2em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+/* Global layouts */
+@media screen and (min-width: 700px) {
+    .two-column {
+        column-count: 2;
+        column-gap: 2.4em;
+    }
+	
+}
+@media screen and (max-width: 699px){
+    h1{
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+	.contact-list{
+		text-decoration: none;
+		padding: 8px;
+		Border-radius: 4px;
+		display: inline-block;
+		font-size: 75%
+	}
+}
+
+/* Global buttons */
+.content-button {
+	padding: .5em 1em;
+	border: 3px solid #B51C35;
+	/*border-radius: 10px;*/
+	font-weight: 600;
+}
+
+a.content-button {
+	color: black;
+	text-decoration: none;
+}
+
+a.content-button:focus,
+a.content-button:hover {
+	background: #B51C35;
+	color: #FFFCED;
+}
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+html{
+	background-color: #F4F4E1;
+}
+.site {
+	margin: 1em;
+}
+
+.header,
+.images,
+.main-content,
+.sidebar,
+.footer-content {
+	margin-bottom: 1em;
+    padding: 1em;
+    color: white;
+
+}
+
+.header {
+    background-color: #CA907E;
+	text-align: center;
+	color:white;
+	text-shadow: 3px 3px 3px rgb(20, 20, 20);
+	font-size: 32px;
+}
+
+.images {
+    background-color: #ECE8D9;
+}
+
+.main-content {
+    background-color: #B08F63;
+}
+
+
+.footer-content {
+    background-color: #884636;
+}
+
+.contact-list{
+    list-style-type: none;
+    padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	text-align: center;
+    
+}
+.contact-list a{
+    padding: 15px;
+}
+.contact-list .btn{
+    color: #F7FFF7;
+    background:#CA907E;
+    text-decoration: none;
+    padding: 8px;
+    Border-radius: 4px;
+    display: inline-block;
+}
+
+#navbar {
+    width:auto;
+    display: table;
+    margin: 0 auto;
+}
+#nav, #nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1;
+}
+#nav a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+#nav li {
+    float: left;
+    width: 200px;
+}
+#nav li ul {
+    position: absolute;
+    background:#994636;
+    width: 200px;
+    left: -999em;
+}
+#nav li:hover ul {
+    left:auto;
+}
+#nav li ul li:hover {
+    background: #844636 80%;
+}
+
+#nav .btn{
+    color: #F7FFF7;
+    background: #994636;
+    text-decoration: none;
+    padding: 8px;
+    Border-radius: 4px;
+    display: inline-block;
+}
+#nav .btn:hover{
+    background: rgba(153,70,40, 80%);
+}
+#nav a {
+    color:#F7FFF7;
+}
